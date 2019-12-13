@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="wrap_content"
+        android:text="全部订单"
+        android:background="#1E88E5"
+        android:id="@+id/order_all"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="wrap_content"
+        android:text="待付款"
+        android:background="#FFB300"
+        android:id="@+id/order_obligation"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="wrap_content"
+        android:text="待收货"
+        android:background="#318635"
+        android:id="@+id/order_sh"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="wrap_content"
+        android:text="待评价"
+        android:background="#5E35B1"
+        android:id="@+id/order_pj"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="wrap_content"
+        android:text="已完成"
+        android:background="#E53935"
+        android:id="@+id/order_ok"
+        android:layout_height="wrap_content" />
+</LinearLayout>

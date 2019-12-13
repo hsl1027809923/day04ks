@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Shipping_address_Activity">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="李小二"
+        android:textSize="30dp"
+        android:id="@+id/address_name"
+        android:layout_height="50dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/address_text1"
+        android:text="广东省 深圳市 福田区 宝岗街道办事处 皇岗商务中心55楼"
+        android:layout_height="30dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="30dp"
+            android:id="@+id/address_radio"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="当前地址"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_marginLeft="100dp"
+            android:layout_width="wrap_content"
+            android:text="修改"
+            android:id="@+id/address_butx"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="wrap_content"
+            android:text="删除"
+            android:id="@+id/address_buts"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="500dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200dp"
+        android:background="#E96B69"
+        android:id="@+id/address_xzdz"
+        android:text="新增收货地址"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
