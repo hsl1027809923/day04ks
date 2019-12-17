@@ -1,60 +1,57 @@
 package base;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import contract.Icontract;
 
 /*
  *@auther:郝世龙
- *@Date: 2019-12-09
- *@Time:9:32
+ *@Date: 2019-12-16
+ *@Time:9:37
  *@Description:${activity基类}
- **/public abstract class BaseActivity<P extends BasePresenter2> extends AppCompatActivity implements Icontract.IView {
+ **/public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity implements Icontract.IView {
     public P p;
-    private Unbinder bind;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (initLayout()!=0){
+        if (initLayout() != 0) {
+            //加载布局
             setContentView(initLayout());
-            //!!!!!!!!!!!!!!!!!!!
-            p=initPresenter();
-            //!!!!!!!!!!!!!!!!!!!!
-            if (p!=null){
-                p.Aattch(this);
+            //初始化控件
+            initView();
+            //实例化p层
+            p = initPresenter();
+            //绑定
+            if (p != null) {
+                p.Attach(this);
             }
-
-            initView();;
+            //设置数据
             initData();
-            bind = ButterKnife.bind(this);
+
+
         }
     }
 
     protected abstract int initLayout();
 
-
-    protected abstract void initData();
-
     protected abstract void initView();
 
     protected abstract P initPresenter();
 
+    protected abstract void initData();
+    //解绑
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
-            if (bind!=null){
-                bind.unbind();
-            }
-
-            if (p!=null){
-                p.Uattach();
-                p=null;
-
-            }
+        if (p!=null){
+            p.Uttach();
+            p=null;
+        }
     }
 }

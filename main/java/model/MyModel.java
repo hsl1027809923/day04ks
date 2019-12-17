@@ -1,7 +1,5 @@
 package model;
 
-import android.util.Log;
-
 import java.util.Map;
 
 import contract.Icontract;
@@ -9,31 +7,29 @@ import util.HttpUtil;
 
 /*
  *@auther:郝世龙
- *@Date: 2019-12-09
+ *@Date: 2019-12-16
  *@Time:9:50
- *@Description:${model层}
+ *@Description:${M层}
  **/public class MyModel implements Icontract.IModel {
-
-    @Override
-    public void doGet(String url, Class cls, final Icontract.MCallBack callBack) {
-        HttpUtil.getInstance().doGet(url, cls, new HttpUtil.HCallBack() {
-            @Override
-            public void onSuccess(Object o) {
-                Log.e("modeloo",o.toString());
-                callBack.onSuccess(o);
-            }
-
-            @Override
-            public void onError(String er) {
-                callBack.onError(er);
-            }
-        });
-
-    }
     //登陆
     @Override
-    public void doPost(String url, Class cls, Map<String, Object> map, final Icontract.MCallBack callBack) {
-        HttpUtil.getInstance().doPost(url, cls, map, new HttpUtil.HCallBack() {
+    public void PostHave(String url, Class cls, Map map, final Icontract.MCallBack callBack) {
+        HttpUtil.getInstance().PostHaveDL(url, map, cls, new HttpUtil.HCallBack() {
+                    @Override
+                    public void onSuccess(Object o) {
+                        callBack.onSuccess(o);
+                    }
+
+                    @Override
+                    public void onError(String er) {
+                        callBack.onError(er);
+                    }
+                });
+    }
+    //订单
+    @Override
+    public void GetHave(String url, Class cls, Map map, final Icontract.MCallBack callBack) {
+        HttpUtil.getInstance().GetHaveorder(url, map, cls, new HttpUtil.HCallBack() {
             @Override
             public void onSuccess(Object o) {
                 callBack.onSuccess(o);

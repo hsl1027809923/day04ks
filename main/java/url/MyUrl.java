@@ -1,27 +1,16 @@
 package url;
 
-import java.net.URL;
-
 /*
  *@auther:郝世龙
- *@Date: 2019-12-09
- *@Time:9:27
- *@Description:${DESCRIPTION}
+ *@Date: 2019-12-16
+ *@Time:9:51
+ *@Description:${接口}
  **/public interface MyUrl {
     //内网
-    String BEANURL="http://172.17.8.100/";
-    //外网
-    String WWANURL="mobile.bwstudent.com";
-    //首页
-    String SY="small/commodity/v1/commodityList";
-    //轮播图
-    String BN="small/commodity/v1/bannerShow";
+    String BANNER="http://172.17.8.100/small/";
 
     //登陆
-    String LOGIN="small/user/v1/login";
-    //注册
-    String ZHUCE="small/user/v1/register";
+    String LOGIN="user/v1/login";
     //订单
     String ORDER="order/verify/v1/findOrderListByStatus";
-
 }

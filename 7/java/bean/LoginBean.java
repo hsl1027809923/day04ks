@@ -2,13 +2,13 @@ package bean;
 
 /*
  *@auther:郝世龙
- *@Date: 2019-12-16
- *@Time:10:15
+ *@Date: 2019-12-12
+ *@Time:16:20
  *@Description:${DESCRIPTION}
  **/public class LoginBean {
 
     /**
-     * result : {"headPic":"http://172.17.8.100/images/small/default/user.jpg","nickName":"MM_15G12","phone":"17821209778","sessionId":"157645818396211311","sex":1,"userId":11311}
+     * result : {"headPic":"http://172.17.8.100/images/small/default/user.jpg","nickName":"MM_15G12","phone":"17821209778","sessionId":"157613863033511311","sex":1,"userId":11311}
      * message : 登录成功
      * status : 0000
      */
@@ -46,7 +46,7 @@ package bean;
          * headPic : http://172.17.8.100/images/small/default/user.jpg
          * nickName : MM_15G12
          * phone : 17821209778
-         * sessionId : 157645818396211311
+         * sessionId : 157613863033511311
          * sex : 1
          * userId : 11311
          */

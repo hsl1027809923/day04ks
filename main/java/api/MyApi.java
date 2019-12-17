@@ -11,15 +11,14 @@ import retrofit2.http.Url;
 
 /*
  *@auther:郝世龙
- *@Date: 2019-12-09
- *@Time:9:24
- *@Description:${DESCRIPTION}
+ *@Date: 2019-12-16
+ *@Time:9:46
+ *@Description:${请求类型}
  **/public interface MyApi {
-    @GET
-    Observable<ResponseBody> getInfo(@Url String url);
+    //登陆
     @POST
-    Observable<ResponseBody> PostLogin(@Url String url ,@QueryMap Map<String,Object>map);
+    Observable<ResponseBody> postHave(@Url String url, @QueryMap Map<String,Object> map);
+    //订单
     @GET
-    Observable<ResponseBody> getInfoHave(@Url String url,@QueryMap Map<String,String> map);
-
+    Observable<ResponseBody> getHave(@Url String url,@QueryMap Map<String,Object>map);
 }
