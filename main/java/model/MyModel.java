@@ -1,35 +1,18 @@
 package model;
 
-import java.util.Map;
-
 import contract.Icontract;
-import util.HttpUtil;
+import util.MyUtil;
 
 /*
  *@auther:郝世龙
- *@Date: 2019-12-16
- *@Time:9:50
- *@Description:${M层}
+ *@Date: 2019-12-18
+ *@Time:14:41
+ *@Description:${DESCRIPTION}
  **/public class MyModel implements Icontract.IModel {
-    //登陆
+    //二级类目
     @Override
-    public void PostHave(String url, Class cls, Map map, final Icontract.MCallBack callBack) {
-        HttpUtil.getInstance().PostHaveDL(url, map, cls, new HttpUtil.HCallBack() {
-                    @Override
-                    public void onSuccess(Object o) {
-                        callBack.onSuccess(o);
-                    }
-
-                    @Override
-                    public void onError(String er) {
-                        callBack.onError(er);
-                    }
-                });
-    }
-    //订单
-    @Override
-    public void GetHave(String url, Class cls, Map map, final Icontract.MCallBack callBack) {
-        HttpUtil.getInstance().GetHaveorder(url, map, cls, new HttpUtil.HCallBack() {
+    public void doGetInfo(String url, Class cls, final Icontract.MCallBack callBack) {
+        MyUtil.getInstance().GetInfo(url, cls, new MyUtil.HCallBack() {
             @Override
             public void onSuccess(Object o) {
                 callBack.onSuccess(o);
