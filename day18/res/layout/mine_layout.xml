@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:id="@+id/car_expand"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/shopping_linner"
+        android:groupIndicator="@null">
+    </ExpandableListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/shopping_linner"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+        <CheckBox
+            android:id="@+id/All_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="全选" />
+
+        <TextView
+            android:id="@+id/All_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="总价：5000" />
+
+        <TextView
+            android:id="@+id/All_Count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总数量：50" />
+    </LinearLayout>
+</RelativeLayout>
